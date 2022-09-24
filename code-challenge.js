@@ -13,7 +13,12 @@ const isThatMichaelJordan = (name) => {
 };
 
 const areYouM = (name) => {
-  // insert code
+  // Your code here
+  if (name[0] === "M") {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const mostViewsThreeSneakers = (
@@ -21,7 +26,12 @@ const mostViewsThreeSneakers = (
   sneakerTwoViews,
   sneakerThreeViews
 ) => {
-  // insert code
+  let mostViewsThreeSneakers = Math.max(
+    sneakerOneViews,
+    sneakerTwoViews,
+    sneakerThreeViews
+  );
+  return mostViewsThreeSneakers;
 };
 
 const mostViews = (sneakerViews) => {
