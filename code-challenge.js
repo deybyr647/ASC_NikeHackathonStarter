@@ -78,6 +78,14 @@ const getInitials = (name) => {
 
 const howRepetitiveAreYou = (str, word) => {
   // insert code
+  const splitWords = str.split(" ");
+  let count = 0;
+  for (let i = 0; i < splitWords.length; i++) {
+    if (splitWords[i].includes(word)) {
+      count++;
+    }
+  }
+  return count;
 };
 
 const spanishToEnglish = (spanish) => {
