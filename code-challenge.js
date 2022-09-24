@@ -1,19 +1,26 @@
 /* eslint-disable no-unused-vars */
-const { SPANISH_DICTIONARY, SHOE_LIST } = require('./constants.js');
+const { SPANISH_DICTIONARY, SHOE_LIST } = require("./constants.js");
 
 const newSneakers = (sneakers) => {
   // insert code
+  return "New Sneakers " + sneakers + " dropping soon!";
 };
 
 const isThatMichaelJordan = (name) => {
-  // insert code
+  let str = name.toLowerCase();
+  if (str == "michael jordan") return true;
+  else return false;
 };
 
 const areYouM = (name) => {
   // insert code
 };
 
-const mostViewsThreeSneakers = (sneakerOneViews, sneakerTwoViews, sneakerThreeViews) => {
+const mostViewsThreeSneakers = (
+  sneakerOneViews,
+  sneakerTwoViews,
+  sneakerThreeViews
+) => {
   // insert code
 };
 
