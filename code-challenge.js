@@ -3,7 +3,7 @@ const { SPANISH_DICTIONARY, SHOE_LIST } = require("./constants.js");
 
 const newSneakers = (sneakers) => {
   // insert code
-  return "New Sneakers " + sneakers + " dropping soon!";
+  return "New sneakers " + sneakers + " dropping soon!";
 };
 
 const isThatMichaelJordan = (name) => {
@@ -35,19 +35,35 @@ const mostViewsThreeSneakers = (
 };
 
 const mostViews = (sneakerViews) => {
-  // insert code
+  let mostViewedSneaker = Math.max(...sneakerViews);
+
+  return mostViewedSneaker;
 };
 
 const validateEmail = (email) => {
-  // insert code
+  let validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (email.value.match(validRegex)) {
+    return "Valid email address";
+  } else {
+    return "Invalid email address";
+  }
+
+  //omitted code
 };
 
 const validateEmailWithError = (email) => {
   // insert code
+  //ommited code
 };
 
 const getInitials = (name) => {
   // insert code
+  const splitName = name.split(" ");
+  const firstName = splitName[0].charAt(0);
+  const lastName = splitName[1].charAt(0);
+  return firstName + lastName;
 };
 
 const howRepetitiveAreYou = (str, word) => {
