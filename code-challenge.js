@@ -43,14 +43,11 @@ const mostViews = (sneakerViews) => {
 const validateEmail = (email) => {
   let validRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-  if (email.value.match(validRegex)) {
-    return "Valid email address";
+  if (validRegex.test(email)) {
+    return "Valid email";
   } else {
-    return "Invalid email address";
+    return "Invalid email";
   }
-
-  //omitted code
 };
 
 const validateEmailWithError = (email) => {
@@ -61,9 +58,22 @@ const validateEmailWithError = (email) => {
 const getInitials = (name) => {
   // insert code
   const splitName = name.split(" ");
-  const firstName = splitName[0].charAt(0);
-  const lastName = splitName[1].charAt(0);
-  return firstName + lastName;
+  if (splitName.length === 2) {
+    const firstInitial = splitName[0].charAt(0);
+    const lastInitial = splitName[1].charAt(0);
+    return firstInitial + lastInitial;
+  }
+  if (splitName.length === 1) {
+    return (
+      splitName[0].charAt(0).toUpperCase() +
+      splitName[0].charAt(1).toUpperCase()
+    );
+  }
+  if (splitName.length > 2) {
+    return (
+      splitName[0].charAt(0) + splitName[1].charAt(0) + splitName[2].charAt(0)
+    );
+  }
 };
 
 const howRepetitiveAreYou = (str, word) => {
